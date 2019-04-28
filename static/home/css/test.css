@@ -1,0 +1,9 @@
+#demo-top-bar {
+    text-align: left;
+    background: #222;
+    position: relative;
+    zoom: 1;
+    width: 100% !important;
+    z-index: 6000;
+    padding: 20px 0 20px;
+}

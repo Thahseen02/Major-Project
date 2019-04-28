@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Adaptive Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">
+</head>
+<body style="background-color: black">
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1" >
+					Take Your Test Here
+				</span>
+            </div>
+            <form class="contact100-form validate-form" method="post" action="final">{% csrf_token %}
+            <ol>
+            {% for j in os %} {%if j is not None %}{% for i in j%}<br><div>
+            <li>
+            <h3>{{i.question}} ({{i.subject}} - {% if i.category == "1" %} E->D {% endif %}
+            {% if i.category == "2" %} D->C {% endif %}{% if i.category == "3" %} C->B {% endif %}{% if i.category == "4" %} B->A {% endif %}{% if i.category == "5" %} S->As {% endif %}
+            )
+            </h3><br>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.a_choice}}">
+            <label for="{{i.question}}">A){{i.a_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.b_choice}}">
+            <label for="{{i.question}}">B){{i.b_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.c_choice}}">
+            <label for="{{i.question}}">C){{i.c_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.d_choice}}">
+            <label for="{{i.question}}">D){{i.d_choice}}</label> 
+            </div>
+            </li>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            </ol>
+            <ol>
+            {% for j in networks %} {%if j is not None %}{% for i in j%}<br><div>
+            <li>
+            <h3>{{i.question}} ({{i.subject}} - {% if i.category == "1" %} E->D {% endif %}
+            {% if i.category == "2" %} D->C {% endif %}{% if i.category == "3" %} C->B {% endif %}{% if i.category == "4" %} B->A {% endif %}{% if i.category == "5" %} S->As {% endif %}
+            )</h3><br>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.a_choice}}">
+            <label for="{{i.question}}">A){{i.a_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.b_choice}}">
+            <label for="{{i.question}}">B){{i.b_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.c_choice}}">
+            <label for="{{i.question}}">C){{i.c_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.d_choice}}">
+            <label for="{{i.question}}">D){{i.d_choice}}</label> 
+            </div>
+            </li>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            </ol>
+            <ol>
+            {% for j in dbms %}  {%if j is not None %}{% for i in j%}<br><div>
+            <li>
+            <h3>{{i.question}} ({{i.subject}} - {% if i.category == "1" %} E->D {% endif %}
+            {% if i.category == "2" %} D->C {% endif %}{% if i.category == "3" %} C->B {% endif %}{% if i.category == "4" %} B->A {% endif %}{% if i.category == "5" %} S->As {% endif %}
+            )</h3><br>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.a_choice}}">
+            <label for="{{i.question}}">A){{i.a_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.b_choice}}">
+            <label for="{{i.question}}">B){{i.b_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.c_choice}}">
+            <label for="{{i.question}}">C){{i.c_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.d_choice}}">
+            <label for="{{i.question}}">D){{i.d_choice}}</label> 
+            </div>
+            </li>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            </ol>
+            <ol>
+            {% for j in dsa %} {%if j is not None %}{% for i in j%}<br><div>
+            <li>
+            <h3>{{i.question}} ({{i.subject}} - {% if i.category == "1" %} E->D {% endif %}
+            {% if i.category == "2" %} D->C {% endif %}{% if i.category == "3" %} C->B {% endif %}{% if i.category == "4" %} B->A {% endif %}{% if i.category == "5" %} S->As {% endif %}
+            )</h3><br>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.a_choice}}">
+            <label for="{{i.question}}">A){{i.a_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.b_choice}}">
+            <label for="{{i.question}}">B){{i.b_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.c_choice}}">
+            <label for="{{i.question}}">C){{i.c_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.d_choice}}">
+            <label for="{{i.question}}">D){{i.d_choice}}</label> 
+            </div>
+            </li>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            </ol>
+            {% if flag == 1 %}
+            <div><h2>Yaay !! You're in the highest cluster. <br>Good Luck  :)</h2></div>
+            {% endif %}
+            <div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+							Submit
+					</button>
+				</div>   
+            </form>
+        </div>
+	</div>
+
+</body>
+</html>

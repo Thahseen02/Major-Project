@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Training-Result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'mine/css/test.css' %}">
+</head>
+<body style="background-color: black">
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1" align='left' >
+					Evaluation Result
+				</span>
+            </div>
+            <div class = "contact100-form">
+                <table>
+                    <tr><th></th>
+                    <th>
+                        OS
+                    </th>
+                    <th>
+                        DBMS
+                    </th>
+                    <th>
+                        NETWORKS
+                    </th>
+                    <th>
+                        DSA
+                    </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Center Grade
+                        </th>
+                        <td>
+                            {{center.0}}
+                        </td>
+                        <td>
+                            {{center.1}}
+                        </td>
+                        <td>
+                            {{center.2}}
+                        </td>
+                        <td>
+                            {{center.3}}
+                        </td>
+                    </tr>
+                    <tr>
+                       <th>Student's Grade</th>
+                        <td>
+                            {{grade.0}}
+                        </td>
+                        <td>
+                            {{grade.1}}
+                        </td>
+                        <td>
+                            {{grade.2}}
+                        </td>
+                        <td>
+                            {{grade.3}}
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                    <div class="container-contact100-form-btn">
+					<a href="adaptive" class="contact100-form-btn">Continue</a>
+				</div>
+               
+                
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>

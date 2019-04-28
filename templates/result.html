@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Prediction-Result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'mine/css/test.css' %}">
+	
+</head>
+<body style="background-color: black">
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100-result">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1" >
+					Tier {{result.0}}
+				</span>
+            </div>
+            <div class = "contact100-form-result">
+                <ul style="list-style-type:circle;">
+                    {% for i in tier %}
+                    <li>
+                        {{i}}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="container-contact100-form-btn">
+                <a href="renderpdf" class="contact100-form-btn" target="_blank" role="button">Print PDF</a>
+				</div>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Sample Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">
+</head>
+<body style="background-color: black">
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1" >
+					Take Your Test Here
+				</span>
+            </div>
+            <form class="contact100-form validate-form" method="post" action="result">{% csrf_token %}
+            <ol>
+            {% for i in questions %}<br><div>
+            <li>
+            <h3>{{i.question}}   ({{i.subject}}-{% if i.category == "E" %} Easy {% endif %}{% if i.category == "M" %} Medium {% endif %}{% if i.category == "H" %} Hard {% endif %}
+            )</h3><br>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.a_choice}}">
+            <label for="{{i.question}}">A){{i.a_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.b_choice}}">
+            <label for="{{i.question}}">B){{i.b_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.c_choice}}">
+            <label for="{{i.question}}">C){{i.c_choice}}</label> 
+            </div>
+            <div>
+            <input type=radio name="{{i.question}}" value="{{i.d_choice}}">
+            <label for="{{i.question}}">D){{i.d_choice}}</label> 
+            </div>
+            </li>
+            </div>
+            {% endfor %}
+            </ol>
+            <div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+							Submit
+					</button>
+				</div>
+            </form>
+        </div>
+	</div>
+
+</body>
+</html>

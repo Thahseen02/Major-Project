@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Prediction PDF</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">-->
+	<style>
+        html{
+            font-size: 13px;
+            /* font:0.75em/1.5 helvetica; */
+            color:#333;
+            background-color:#fff;
+
+        }
+
+        /* Tables */
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        th{
+            font-size: 1.2em;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            /* padding-bottom: 2px; */
+            vertical-align: middle;
+            font-weight:bold;
+            background-color:#ddd;
+        }
+        th,
+        td{
+          vertical-align: middle;
+          padding-top: 5px;
+          padding-left: 5px;    
+          padding-bottom: 5px; 
+          border:1px solid #aaa;
+        }
+        @page {
+          size: letter landscape;
+          margin:.5cm;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+      <table style='border-collapse:collapse'>
+          <thead>
+              <tr >
+                  <th style="border=3px;" colspan="2">
+                      Prediction Result
+                  </th>
+              </tr>
+          </thead>
+          <tr>
+              <td>
+                  Name
+              </td>
+              <td>
+                  {{name}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Roll Number
+              </td>
+              <td>
+                  {{roll_number}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  CGPA
+              </td>
+              <td>
+                  {{cgpa}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  12th Grade
+              </td>
+              <td>
+                  {{school_grade}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Grade in OS
+              </td>
+              <td>
+                  {{os}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Grade in DBMS
+              </td>
+              <td>
+                  {{dbms}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Grade in Networks
+              </td>
+              <td>
+                  {{networks}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Grade in DSA
+              </td>
+              <td>
+                  {{dsa}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Predicted Tier
+              </td>
+              <td>
+                  Tier {{result}}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Companies in Predicted Tier
+              </td>
+              <td>
+                  {% for i in tier %}
+                  {{i}}
+                  <br>
+                  {% endfor %}
+              </td>
+          </tr>
+      </table>
+       
+   </div>
+        
+    
+</body>
+</html>

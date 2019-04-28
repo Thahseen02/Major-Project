@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Training PDF</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">-->
+	<style>
+        html{
+            font-size: 13px;
+            /* font:0.75em/1.5 helvetica; */
+            color:#333;
+            background-color:#fff;
+
+        }
+
+        /* Tables */
+        table{
+            width: 20%;
+            border-collapse: collapse;
+        }
+        th{
+            font-size: 1.2em;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            /* padding-bottom: 2px; */
+            vertical-align: middle;
+            font-weight:bold;
+            background-color:#ddd;
+        }
+        th,
+        td{
+          vertical-align: middle;
+          text-align: center;    
+          padding-top: 5px;    
+          padding-bottom: 5px; 
+          border:1px solid #aaa;
+        }
+        @page {
+          size: letter landscape;
+          margin:.5cm;
+        }
+    </style>
+</head>
+<body>
+  <h3>Name of Candidate : {{candidate_name}}</h3>
+  <h3>Roll Number : {{candidate_number}}</h3>
+   <div class="container">
+    <center><h3>Initial Test Results</h3></center>
+     <table style='border-collapse:collapse'>
+         <tr><th></th>
+                    <th>
+                        OS
+                    </th>
+                    <th>
+                        DBMS
+                    </th>
+                    <th>
+                        NETWORKS
+                    </th>
+                    <th>
+                        DSA
+                    </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Center Grade
+                        </th>
+                        <td>
+                            {{cluster_os}}
+                        </td>
+                        <td>
+                            {{cluster_dbms}}
+                        </td>
+                        <td>
+                            {{cluster_networks}}
+                        </td>
+                        <td>
+                            {{cluster_dsa}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Student Grade
+                        </th>
+                        <td>
+                            {{prev_os}}
+                        </td>
+                        <td>
+                            {{prev_dbms}}
+                        </td>
+                        <td>
+                            {{prev_networks}}
+                        </td>
+                        <td>
+                            {{prev_dsa}}
+                        </td>
+                    </tr>
+      </table>
+    </div>
+    <br>
+    <center><h3>Adaptive Test Results</h3></center>
+     <div class="container">
+      <table style='border-collapse:collapse'>
+         <tr><th></th>
+                    <th>
+                        OS
+                    </th>
+                    <th>
+                        DBMS
+                    </th>
+                    <th>
+                        NETWORKS
+                    </th>
+                    <th>
+                        DSA
+                    </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            First Attempt
+                        </th>
+                        <td>
+                            {{prev_os}}
+                        </td>
+                        <td>
+                            {{prev_dbms}}
+                        </td>
+                        <td>
+                            {{prev_networks}}
+                        </td>
+                        <td>
+                            {{prev_dsa}}
+                        </td>
+                    </tr>
+                    <tr>
+                       <th>Second Attempt</th>
+                        <td>
+                            {{current_os}}
+                        </td>
+                        <td>
+                            {{current_dbms}}
+                        </td>
+                        <td>
+                            {{current_networks}}
+                        </td>
+                        <td>
+                            {{current_dsa}}
+                        </td>
+                        
+                    </tr>
+      </table>
+      
+       
+   </div>
+        
+    
+</body>
+</html>

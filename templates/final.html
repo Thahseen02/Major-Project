@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Final-Result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'mine/css/test.css' %}">
+</head>
+<body style="background-color: black">
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1" align='left' >
+					Evaluation Result
+				</span>
+            </div>
+            <div class = "contact100-form">
+                <table>
+                    <tr><th></th>
+                    <th>
+                        OS
+                    </th>
+                    <th>
+                        DBMS
+                    </th>
+                    <th>
+                        NETWORKS
+                    </th>
+                    <th>
+                        DSA
+                    </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Previous Attempt
+                        </th>
+                        <td>
+                            {{prev_os}}
+                        </td>
+                        <td>
+                            {{prev_dbms}}
+                        </td>
+                        <td>
+                            {{prev_networks}}
+                        </td>
+                        <td>
+                            {{prev_dsa}}
+                        </td>
+                    </tr>
+                    <tr>
+                       <th>Current Attempt</th>
+                        <td>
+                            {{current_os}}
+                        </td>
+                        <td>
+                            {{current_dbms}}
+                        </td>
+                        <td>
+                            {{current_networks}}
+                        </td>
+                        <td>
+                            {{current_dsa}}
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                    <div class="container-contact100-form-btn">
+					<a href="renderpdf" class="contact100-form-btn" target="_blank" role="button">Print PDF</a>
+				</div>
+               
+                
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>
