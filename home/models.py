@@ -24,7 +24,7 @@ class Input(models.Model):
     roll_number= models.CharField(max_length=25,verbose_name='Roll Number')
     gender = models.CharField(max_length=1, choices=Gender_Choices,verbose_name='Gender')
     cgpa = models.FloatField(verbose_name='CGPA')
-    school_grade = models.FloatField(verbose_name='12th Grade')
+    school_grade = models.FloatField(verbose_name='12th Grade (In percentage)')
     internship = models.CharField(max_length=1,choices=Internship_Choices,verbose_name='Internship Experience')
     os = models.CharField(max_length=1,choices=Grade_Choices,verbose_name='Grade in Operating Sytems')
     networks = models.CharField(max_length=1,choices=Grade_Choices,verbose_name='Grade in Networks')
