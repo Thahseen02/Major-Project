@@ -34,5 +34,3 @@ class Input(models.Model):
     
     
     
-    
-    
