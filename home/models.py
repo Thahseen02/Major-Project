@@ -30,9 +30,7 @@ class Input(models.Model):
     networks = models.CharField(max_length=1,choices=Grade_Choices,verbose_name='Grade in Networks')
     dbms = models.CharField(max_length=1,choices=Grade_Choices,verbose_name='Grade in DBMS ')
     dsa = models.CharField(max_length=1,choices=Grade_Choices,verbose_name='Grade in DSA')
-#    interviews = models.FloatField(verbose_name='Number Of Interviews Attended')
-    
-    
+    interviews = models.FloatField(verbose_name='Number Of Interviews Attended')
     
     
     
